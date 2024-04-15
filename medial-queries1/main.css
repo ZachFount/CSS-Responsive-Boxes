@@ -1,36 +1,39 @@
 body {
-  background: gray;
+  background: blanchedalmond;
 }
-
-* {
-  border: 1px solid purple;
-}
-
 .container {
+  outline: 2px solid red;
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
-  justify-content: space-between;
+  height: 100vh;
+  font-size: 2em;
+  text-align: center;
 }
-
-header, footer  {
-  flex-grow: 1;
+.a {
+  background-color: blueviolet;
+  flex-grow: 2;
 }
-
-main {
-  flex-grow:3;
+.b {
+  background-color: blue;
+  min-height: 65vh;
 }
+.c {
+  background-color: aqua;
+  flex-grow: 2;
+}
+.a, .b, .c {
+  margin: 0.5em;}
 
-
-@media (min-width: 600px) {
+@media(min-width:600px) {
   .container {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  header {
+  .b {
+    width: 75vw;
+  }
+  .a {
     width: 100%;
   }
-  main, footer, header {
-    margin: 1em;
-  }
+   
 }
